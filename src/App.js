@@ -174,6 +174,7 @@ function HomePage() {
       </section>
     </div>
   );
+}
 
 function AboutPage() {
   return (
