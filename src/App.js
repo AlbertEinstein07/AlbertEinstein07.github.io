@@ -13,17 +13,19 @@ const posts = [
     summary:
       "Traditional lawns are water hogs. Learn about native landscaping alternatives that conserve water and support biodiversity.",
     content: `
-      <h1>Ditch the Grass: Smarter Landscaping for Arid Regions</h1>
-      
-      <p>Traditional lawns are one of the biggest water consumers in residential landscapes, especially in arid regions where they're not naturally adapted to the climate. In this article, we'll explore smarter landscaping alternatives that conserve water while still creating beautiful outdoor spaces.</p>
+      <p><b>Traditional lawns are some of the biggest water consumers in residential landscapes</b>, especially in arid regions where they're not naturally adapted to the climate. In this article, we'll explore smarter landscaping alternatives that conserve water while still creating beautiful outdoor spaces.</p>
       
       <h2>Why Traditional Lawns Are Problematic</h2>
       
-      <p>A typical grass lawn requires approximately 55 gallons of water per square foot annually in arid regions. Beyond their excessive water consumption, lawns often require chemical fertilizers, pesticides, and regular maintenance with gas-powered equipment, all of which have environmental impacts.</p>
+      <p>In dry climates like the American Southwest, a lush green lawn may seem like a symbol of success or comfort — but it's a symbol that comes at a steep environmental cost. A typical lawn in an arid region requires an estimated 55 gallons of water per square foot annually. That means a modest 1,000-square-foot lawn consumes around 55,000 gallons of water each year, just to stay green.</p>
+
+      <p>But the impact goes beyond water use. Traditional lawns often depend on chemical fertilizers and pesticides that can run off into storm drains, contaminating local water supplies. The maintenance also adds up — gas-powered mowers and blowers contribute to air pollution and greenhouse gas emissions, while weekly upkeep takes time and money.</p>
+      
+      <p>In short, the typical lawn is <b>resource-intensive, ecologically disruptive, and ill-suited for arid environments.</b> It’s time to rethink what a beautiful yard looks like.</p>
       
       <h2>Native Alternatives</h2>
       
-      <p>Native plants have evolved to thrive in your local conditions without additional water beyond what nature provides. In the southwest United States, plants like agave, yucca, sage, and various native grasses can create visually stunning landscapes that require minimal irrigation once established.</p>
+      <p>Fortunately, there are water-smart alternatives that are both ecologically responsible and visually appealing. <b>Native plants</b>, which have evolved to thrive in the natural conditions of your local climate, offer an excellent solution. <br><br>In the Southwest, for example, native species like <b>agave, yucca, desert marigold, globe mallow, penstemon, and various native grasses</b> not only survive with minimal water but also create landscapes full of texture, color, and movement. These plants are adapted to periods of drought, heat, and poor soils — all without the need for synthetic inputs. <br><br><b>Xeriscaping</b>, the practice of designing landscapes to reduce or eliminate irrigation, often incorporates native and drought-tolerant plants, gravel or mulch groundcovers, and efficient drip irrigation systems. Far from being dull or brown, these gardens can be vibrant and full of life — and they change with the seasons in a way that turf grass never does.</p>
       
       <h2>Benefits of Native Landscaping</h2>
       
