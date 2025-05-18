@@ -2,7 +2,7 @@
   "name": "temp-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://alberteinstein07.github.io",
+  "homepage": "https://alberteinstein07.github.io/",
   "dependencies": {
     "@radix-ui/react-icons": "^1.3.2",
     "@radix-ui/react-label": "^2.1.6",
