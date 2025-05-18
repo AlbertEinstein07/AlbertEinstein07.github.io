@@ -1,7 +1,201 @@
-<!DOCTYPE html>
-<html>
-    <body>
-        <h1> Hello World </h1>
-        <p> I'm hosted with GitHub Pages. </p>
-    </body>
-</html>
+import React, { useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+
+const posts = [
+  {
+    title: "Ditch the Grass: Smarter Landscaping for Arid Regions",
+    date: "May 10, 2025",
+    summary:
+      "Traditional lawns are water hogs. Learn about native landscaping alternatives that conserve water and support biodiversity.",
+  },
+  {
+    title: "Greywater Recycling 101: Save Water at Home",
+    date: "May 5, 2025",
+    summary:
+      "Discover how to safely reuse water from sinks, showers, and washing machines to nourish your garden.",
+  },
+  {
+    title: "Policy Spotlight: How Local Ordinances Can Encourage Xeriscaping",
+    date: "April 30, 2025",
+    summary:
+      "Explore how legislation can push cities toward sustainable water use by promoting native plant landscaping.",
+  },
+];
+
+function Navigation({ setPage }) {
+  return (
+    <nav className="bg-blue-100 text-blue-900 p-4 rounded-lg mb-6 flex justify-between items-center">
+      <div className="text-xl font-bold cursor-pointer" onClick={() => setPage("home")}>WaterWise Living</div>
+      <div className="space-x-4">
+        <button onClick={() => setPage("home")} className="hover:underline">Home</button>
+        <button onClick={() => setPage("about")} className="hover:underline">About</button>
+        <button onClick={() => setPage("articles")} className="hover:underline">Articles</button>
+        <button onClick={() => setPage("contact")} className="hover:underline">Contact</button>
+        <button onClick={() => setPage("resources")} className="hover:underline">Resources</button>
+        <button onClick={() => setPage("quiz")} className="hover:underline">Quiz</button>
+        <button onClick={() => setPage("calculator")} className="hover:underline">Calculator</button>
+      </div>
+    </nav>
+  );
+}
+
+function HomePage() {
+  return (
+    <div>
+      <header className="mb-10">
+        <h1 className="text-4xl font-bold text-blue-800 mb-2">WaterWise Living</h1>
+        <p className="text-lg text-gray-700">
+          Practical strategies, policy insights, and science-driven stories on saving water and securing our future.
+        </p>
+      </header>
+      <section className="grid gap-6 md:grid-cols-2">
+        {posts.map((post, index) => (
+          <Card key={index} className="hover:shadow-lg transition-shadow bg-white">
+            <CardContent className="p-6">
+              <h2 className="text-2xl font-semibold text-blue-700 mb-1">{post.title}</h2>
+              <p className="text-sm text-gray-500 mb-2">{post.date}</p>
+              <p className="text-base text-gray-800">{post.summary}</p>
+            </CardContent>
+          </Card>
+        ))}
+      </section>
+    </div>
+  );
+}
+
+function AboutPage() {
+  return (
+    <div>
+      <h2 className="text-3xl font-bold text-blue-800 mb-4">About Us</h2>
+      <p className="text-gray-700 text-lg">
+        WaterWise Living is dedicated to promoting sustainable water practices through education, policy advocacy,
+        and community engagement. Our mission is to inspire and inform people to conserve water in their homes,
+        landscapes, and cities.
+      </p>
+    </div>
+  );
+}
+
+function ArticlesPage() {
+  return (
+    <div>
+      <h2 className="text-3xl font-bold text-blue-800 mb-4">Articles</h2>
+      <div className="grid gap-6 md:grid-cols-2">
+        {posts.map((post, index) => (
+          <Card key={index} className="hover:shadow-lg transition-shadow bg-white">
+            <CardContent className="p-6">
+              <h3 className="text-2xl font-semibold text-blue-700 mb-1">{post.title}</h3>
+              <p className="text-sm text-gray-500 mb-2">{post.date}</p>
+              <p className="text-base text-gray-800">{post.summary}</p>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function ContactPage() {
+  return (
+    <div>
+      <h2 className="text-3xl font-bold text-blue-800 mb-4">Contact Us</h2>
+      <form className="space-y-4 bg-blue-50 p-6 rounded-lg">
+        <Input placeholder="Your Name" />
+        <Input type="email" placeholder="Your Email" />
+        <Textarea placeholder="Your Message" />
+        <Button type="submit">Submit</Button>
+      </form>
+    </div>
+  );
+}
+
+function ResourcesPage() {
+  return (
+    <div>
+      <h2 className="text-3xl font-bold text-blue-800 mb-4">Resources</h2>
+      <ul className="space-y-4 text-gray-700 text-lg list-disc list-inside">
+        <li>
+          <a href="https://www.epa.gov/watersense" target="_blank" rel="noopener noreferrer" className="text-blue-700 underline">
+            EPA WaterSense Program
+          </a>
+        </li>
+        <li>
+          <a href="https://wateruseitwisely.com" target="_blank" rel="noopener noreferrer" className="text-blue-700 underline">
+            Water Use It Wisely: 100+ Ways to Conserve
+          </a>
+        </li>
+        <li>
+          <a href="https://www.twdb.texas.gov/conservation/" target="_blank" rel="noopener noreferrer" className="text-blue-700 underline">
+            Texas Water Development Board – Conservation Resources
+          </a>
+        </li>
+        <li>
+          <a href="https://www.homeadvisor.com/r/ways-to-save-water/" target="_blank" rel="noopener noreferrer" className="text-blue-700 underline">
+            HomeAdvisor: Top 30 Ways to Save Water
+          </a>
+        </li>
+        <li>
+          <a href="https://trca.ca/resource/green-yard-water-conservation/" target="_blank" rel="noopener noreferrer" className="text-blue-700 underline">
+            Toronto and Region Conservation Authority: Green Yard Water Conservation
+          </a>
+        </li>
+      </ul>
+    </div>
+  );
+}
+
+function QuizPage() {
+  return (
+    <div>
+      <h2 className="text-3xl font-bold text-blue-800 mb-4">Water Conservation Quiz</h2>
+      <p className="text-lg text-gray-700 mb-4">Coming soon! Test your water-saving knowledge here.</p>
+    </div>
+  );
+}
+
+function CalculatorPage() {
+  return (
+    <div>
+      <h2 className="text-3xl font-bold text-blue-800 mb-4">Water Savings Calculator</h2>
+      <p className="text-lg text-gray-700 mb-4">Coming soon! Estimate your potential water savings here.</p>
+    </div>
+  );
+}
+
+export default function App() {
+  const [page, setPage] = useState("home");
+
+  let CurrentPage;
+  switch (page) {
+    case "about":
+      CurrentPage = AboutPage;
+      break;
+    case "articles":
+      CurrentPage = ArticlesPage;
+      break;
+    case "contact":
+      CurrentPage = ContactPage;
+      break;
+    case "resources":
+      CurrentPage = ResourcesPage;
+      break;
+    case "quiz":
+      CurrentPage = QuizPage;
+      break;
+    case "calculator":
+      CurrentPage = CalculatorPage;
+      break;
+    default:
+      CurrentPage = HomePage;
+  }
+
+  return (
+    <div className="p-6 max-w-5xl mx-auto">
+      <Navigation setPage={setPage} />
+      <CurrentPage />
+    </div>
+  );
+}
