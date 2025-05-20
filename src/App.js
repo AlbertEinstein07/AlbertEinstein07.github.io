@@ -153,16 +153,7 @@ const posts = [
       <p>Tucson's comprehensive approach combines rebates, education, and rainwater harvesting incentives. Since implementing these policies, the city has seen a 30% reduction in per capita water use despite population growth.</p>
     `,
   },
-  {
-    id: 4,
-    title: "",
-    date: "",
-    summary:
-      "",
-    content:`
-    
-    `,
-  },
+  
 ];
 
 function HeaderComponent() {
