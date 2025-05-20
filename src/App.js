@@ -8,7 +8,7 @@ import { Textarea } from "./components/ui/textarea";
 const posts = [
   {
     id: 1,
-    title: "Ditch the Grass: Smarter Landscaping for Arid Regions",
+    title: "itch the Grass: Smarter Landscaping for Arid Regions",
     date: "May 10, 2025",
     summary:
       "Traditional lawns are water hogs. Learn about native landscaping alternatives that conserve water and support biodiversity.",
@@ -216,15 +216,20 @@ function HeaderComponent() {
           scrolled ? "text-blue-900" : "text-blue-800"
         }`}>
           <Link to="/" className="text-xl font-bold cursor-pointer">WaterWise Living</Link>
-          <div className="space-x-4">
-            <Link to="/" className="hover:underline">Home</Link>
-            <Link to="/about" className="hover:underline">About</Link>
-            <Link to="/articles" className="hover:underline">Articles</Link>
-            <Link to="/contact" className="hover:underline">Contact</Link>
-            <Link to="/resources" className="hover:underline">Resources</Link>
-            <Link to="/quiz" className="hover:underline">Quiz</Link>
-            <Link to="/calculator" className="hover:underline">Calculator</Link>
+          <div className="space-x-2 hidden md:flex">
+            <Link to="/" className="px-3 py-1.5 rounded-lg hover:bg-blue-100 transition-colors">Home</Link>
+            <Link to="/about" className="px-3 py-1.5 rounded-lg hover:bg-blue-100 transition-colors">About</Link>
+            <Link to="/articles" className="px-3 py-1.5 rounded-lg hover:bg-blue-100 transition-colors">Articles</Link>
+            <Link to="/contact" className="px-3 py-1.5 rounded-lg hover:bg-blue-100 transition-colors">Contact</Link>
+            <Link to="/resources" className="px-3 py-1.5 rounded-lg hover:bg-blue-100 transition-colors">Resources</Link>
+            <Link to="/quiz" className="px-3 py-1.5 rounded-lg hover:bg-blue-100 transition-colors">Quiz</Link>
+            <Link to="/calculator" className="px-3 py-1.5 rounded-lg hover:bg-blue-100 transition-colors">Calculator</Link>
           </div>
+          <Button variant="ghost" className="md:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </Button>
         </nav>
       </div>
     </header>
@@ -242,26 +247,90 @@ function Navigation() {
 function HomePage() {
   return (
     <div>
-      <header className="mb-10">
-        <h1 className="text-4xl font-bold text-blue-800 mb-2">WaterWise Living</h1>
-        <p className="text-lg text-gray-700">
+      {/* Hero Section with Gradient Background */}
+      <section className="bg-gradient-to-r from-blue-800 to-blue-600 text-white rounded-xl p-10 mb-12 shadow-lg">
+        <h1 className="text-5xl font-bold mb-4">WaterWise Living</h1>
+        <p className="text-xl mb-6 max-w-3xl">
           Practical strategies, policy insights, and science-driven stories on saving water and securing our future.
         </p>
-      </header>
-      <section className="grid gap-6 md:grid-cols-2">
+        <div className="flex flex-col sm:flex-row gap-4 mt-8">
+          <Link to="/articles" className="no-underline">
+            <Button variant="secondary" size="large" className="w-full sm:w-auto">
+              <span className="flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z" />
+                </svg>
+                View All Articles
+              </span>
+            </Button>
+          </Link>
+          <Link to="/contact" className="no-underline">
+            <Button variant="primary" size="large" className="w-full sm:w-auto shadow-lg hover:shadow-xl">
+              <span className="flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                </svg>
+                Subscribe to Newsletter
+              </span>
+            </Button>
+          </Link>
+        </div>
+      </section>
+      
+      {/* Featured Post Section */}
+      <div className="mb-12">
+        <h2 className="text-3xl font-bold text-blue-800 mb-6 border-b border-blue-200 pb-2">Featured Posts</h2>
+        <p className="text-lg text-gray-600 mb-8">
+          Discover our latest articles on water conservation and sustainable living
+        </p>
+      </div>
+      
+      {/* Single Column Blog Posts */}
+      <section className="space-y-10">
         {posts.map((post) => (
-          <Link to={`/article/${post.id}`} key={post.id} className="no-underline">
-            <Card className="hover:shadow-lg transition-shadow bg-white">
-              <CardContent className="p-6">
-                <h2 className="text-2xl font-semibold text-blue-700 mb-1">{post.title}</h2>
-                <p className="text-sm text-gray-500 mb-2">{post.date}</p>
-                <p className="text-base text-gray-800">{post.summary}</p>
-                <p className="text-blue-600 mt-2 hover:underline">Read more →</p>
+          <Link to={`/article/${post.id}`} key={post.id} className="no-underline block">
+            <Card className="hover:shadow-xl transition-shadow bg-white overflow-hidden">
+              {/* Featured Image Placeholder */}
+              <div className="bg-gradient-to-r from-blue-100 to-blue-50 h-48 flex items-center justify-center">
+                <span className="text-blue-800 font-semibold">Featured Image</span>
+              </div>
+              
+              <CardContent className="p-8">
+                <h2 className="text-3xl font-semibold text-blue-700 mb-3">{post.title}</h2>
+                <p className="text-sm text-gray-500 mb-4 font-medium">{post.date}</p>
+                <p className="text-lg text-gray-800 mb-4 leading-relaxed">{post.summary}</p>
+                <div className="flex justify-between items-center mt-6">
+                  <p className="text-blue-600 font-medium hover:underline">Read more →</p>
+                  <div className="flex space-x-2">
+                    <span className="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Water Conservation</span>
+                    <span className="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Sustainability</span>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           </Link>
         ))}
       </section>
+      
+      {/* Call to Action */}
+      <div className="bg-blue-50 p-8 rounded-lg mt-12 text-center">
+        <h3 className="text-2xl font-bold text-blue-800 mb-3">Join Our Community</h3>
+        <p className="text-lg text-gray-700 mb-6">
+          Stay updated with the latest articles, resources, and water conservation tips
+        </p>
+        <Link to="/contact" className="no-underline inline-block">
+          <Button variant="primary" size="large" className="px-8 py-4 text-lg font-bold shadow-lg hover:shadow-xl">
+            <span className="flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+              </svg>
+              Subscribe Now
+            </span>
+          </Button>
+        </Link>
+      </div>
     </div>
   );
 }
@@ -309,7 +378,14 @@ function ContactPage() {
         <Input placeholder="Your Name" />
         <Input type="email" placeholder="Your Email" />
         <Textarea placeholder="Your Message" />
-        <Button type="submit">Submit</Button>
+        <Button type="submit" variant="primary" size="large" className="w-full md:w-auto mt-2">
+          <span className="flex items-center justify-center">
+            <span>Submit</span>
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clipRule="evenodd" />
+            </svg>
+          </span>
+        </Button>
       </form>
     </div>
   );
@@ -477,8 +553,18 @@ function ArticlePage() {
       <div className="text-center p-8">
         <h2 className="text-3xl font-bold text-red-600 mb-4">Article not found</h2>
         <p className="text-gray-700 mb-6">The article you're looking for doesn't exist.</p>
-        <Button onClick={() => navigate('/articles')}>
-          Back to Articles
+        <Button 
+          onClick={() => navigate('/articles')}
+          variant="secondary"
+          size="large"
+          className="px-6"
+        >
+          <span className="flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" viewBox="0 0 20 20" fill="currentColor">
+              <path fillRule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clipRule="evenodd" />
+            </svg>
+            Back to Articles
+          </span>
         </Button>
       </div>
     );
@@ -486,12 +572,19 @@ function ArticlePage() {
   
   return (
     <div className="article-page">
-      <Button 
-        onClick={() => navigate(-1)} 
-        className="mb-6"
-      >
-        ← Back
-      </Button>
+        <Button 
+          onClick={() => navigate(-1)} 
+          className="mb-6"
+          variant="outline"
+          size="medium"
+        >
+          <span className="flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" viewBox="0 0 20 20" fill="currentColor">
+              <path fillRule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clipRule="evenodd" />
+            </svg>
+            Back
+          </span>
+        </Button>
       
       <div className="bg-white rounded-lg shadow-md p-8">
         <div className="mb-6">
