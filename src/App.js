@@ -155,13 +155,12 @@ const posts = [
   },
   {
     id: 4,
-    title: "Test Article",
-    date: "March 25, 2025",
+    title: "",
+    date: "",
     summary:
-      "This is a test article, no need to worry...",
+      "",
     content:`
-      <p>this is a test article, testing out tags</p>
-      <h2>test header</h2>
+    
     `,
   },
 ];
