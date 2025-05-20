@@ -8,7 +8,7 @@ import { Textarea } from "./components/ui/textarea";
 const posts = [
   {
     id: 1,
-    title: "itch the Grass: Smarter Landscaping for Arid Regions",
+    title: "Ditch the Grass: Smarter Landscaping for Arid Regions",
     date: "May 10, 2025",
     summary:
       "Traditional lawns are water hogs. Learn about native landscaping alternatives that conserve water and support biodiversity.",
