@@ -20,7 +20,7 @@ const posts = [
       <p>In dry climates like the American Southwest, a lush green lawn may seem like a symbol of success or comfort — but it's a symbol that comes at a steep environmental cost. A typical lawn in an arid region requires an estimated 55 gallons of water per square foot annually. That means a modest 1,000-square-foot lawn consumes around 55,000 gallons of water each year, just to stay green.</p>
 
       <p>But the impact goes beyond water use. Traditional lawns often depend on chemical fertilizers and pesticides that can run off into storm drains, contaminating local water supplies. The maintenance also adds up — gas-powered mowers and blowers contribute to air pollution and greenhouse gas emissions, while weekly upkeep takes time and money.</p>
-       
+      
       <p>In short, the typical lawn is <b>resource-intensive, ecologically disruptive, and ill-suited for arid environments.</b> It’s time to rethink what a beautiful yard looks like.</p>
       
       <h2>Native Alternatives</h2>
