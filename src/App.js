@@ -71,40 +71,70 @@ const posts = [
     summary:
       "Discover how to safely reuse water from sinks, showers, and washing machines to nourish your garden.",
     content: `
-      <h1>Greywater Recycling 101: Save Water at Home</h1>
-      
-      <p>Greywater refers to gently used water from your home's sinks, showers, tubs, and washing machines. Instead of sending this water straight to the sewer system, it can be recycled for landscape irrigation, providing substantial water savings for the average household.</p>
+      <p>As water shortages become more common across the globe, especially in arid and drought-prone regions, homeowners are increasingly looking for sustainable ways to reduce water usage. One often-overlooked solution is greywater recycling — a practical, affordable, and eco-friendly way to reuse water you’re already using every day.</p>
+
+      <p><b>Greywater refers to gently used water</b> from your home's sinks, showers, bathtubs, and washing machines. Instead of sending this water down the drain to the sewer system, it can be recycled to irrigate your landscape, providing substantial water savings without sacrificing plant health or household comfort.</p>
       
       <h2>Benefits of Greywater Recycling</h2>
       
-      <p>The average American household uses about 300 gallons of water per day, with 50-80% becoming greywater. By reusing this water in your landscape, you can:</p>
+      <p>The typical American household uses <b>about 300 gallons of water per day</b>, and studies estimate that 50–80% of that becomes greywater. That’s water that has only been lightly used and still holds potential to support plant life, especially in non-potable applications like drip irrigation.</p>
       
+      <p>By installing a greywater system, you can:</p>
+
       <ul>
-        <li>Reduce your overall water consumption by up to 40%</li>
+        <li>Reduce your overall water use by up to 40%</li>
         <li>Lower your water bill</li>
-        <li>Reduce the burden on municipal water treatment facilities</li>
-        <li>Create a more resilient home water system during droughts</li>
+        <li>Reduce the burden on municipal water treatment plants</li>
+        <li>Create a resilient home system in times of drought or water restrictions</li>
       </ul>
+
+      <p>In many dry regions, recycled greywater can provide most — if not all — of the irrigation needs for a typical home garden or landscape.</p>
       
       <h2>Simple Greywater Systems</h2>
       
-      <p>The simplest greywater system is a "laundry-to-landscape" setup, which diverts washing machine water to your yard. This doesn't require permits in many jurisdictions and can be installed as a DIY project for around $150-300 in materials.</p>
-      
-      <h2>Important Safety Guidelines</h2>
-      
-      <p>When implementing a greywater system, follow these safety principles:</p>
+      <p>You don’t need an expensive or complex setup to start reusing greywater. One of the most popular and beginner-friendly methods is the <b>“laundry-to-landscape”</b> system, which reroutes water from your washing machine directly to plants in your yard.</p>
       
       <ul>
-        <li>Use plant-friendly, biodegradable soaps and detergents</li>
-        <li>Apply greywater directly to soil, not through sprayers or sprinklers</li>
-        <li>Don't store greywater for more than 24 hours</li>
-        <li>Don't use greywater on root vegetables or any plants where the edible portion contacts the soil</li>
-        <li>Include a switch to easily direct water to the sewer when using products that aren't greywater-friendly</li>
+        <li><b>Cost</b>: $150–300 in materials</li>
+        <li><b>DIY-friendly</b>: Doesn’t typically require permits in many jurisdictions</li>
+        <li><b>No tanks or pumps needed</b>: Relies on gravity flow and simple piping</li>
       </ul>
+
+      <p>This kind of system works best for trees, shrubs, or garden beds (not lawns), and it allows homeowners to selectively water areas of their landscape that benefit most from consistent moisture.</p>
+
+      <p><b>Pro tip</b>: Use a three-way valve on your washing machine outflow so you can divert water to the sewer when using bleach or harsh cleaners that aren't safe for plants.</p>
+
+      <h2>Important Safety Guidelines</h2>
+      
+      <p>While greywater is a fantastic resource, it’s not completely without risk. To protect both your health and your plants, it’s important to follow these safety principles:</p>
+      
+      <ul>
+        <li><b>Use only biodegradable, plant-friendly</b> soaps and detergents — avoid boron and salts, which can build up in soil over time</li>
+        <li><b>Apply greywater directly to the soil</b> using subsurface irrigation — never spray or mist, as this can aerosolize contaminants</li>
+        <li><b>Don’t store greywater for more than 24 hours</b>, as bacteria can begin to grow</li>
+        <li><b>Avoid watering root vegetables or any edible plant where the produce contacts soil</b></li>
+        <li><b>Include a diverter switch</b> to easily send water back to the sewer when using non-compatible products</li>
+      </ul>
+
+      <p>Greywater isn’t meant to replace potable water for household use, but it’s perfectly safe and effective for landscape reuse when handled correctly.</p>
       
       <h2>Check Local Regulations</h2>
       
-      <p>Before installing a greywater system, always check your local building codes and regulations. Many areas have updated their codes to encourage greywater reuse, but specific requirements vary widely.</p>
+      <p>Before installing any greywater system, make sure to check your <b>local plumbing codes and greywater regulations</b>. Some regions, particularly in the western U.S., have updated their policies to <b>encourage greywater reuse</b>, while others may require permits or professional installation.</p>
+
+      <p>Resources to consult:</p>
+      <ul>
+        <li>Local building or environmental health department</li>
+        <li>Water utility rebates or incentives</li>
+        <li>State environmental agency websites</li>
+        <li>Greywater-specific nonprofits and advocacy groups (like Greywater Action)</li>
+      </ul>
+
+      <p>With proper planning and compliance, greywater systems can cut your outdoor water use dramatically, reduce your utility costs, and help your household become more drought-resilient — all while giving a second life to water you'd otherwise waste.</p>
+
+      <h2>Final Thoughts</h2>
+
+      <p>Greywater recycling is <b>low-tech, high-impact sustainability</b> that’s accessible to nearly every homeowner. It’s one of the smartest water conservation strategies available today — especially in places where every drop counts. By redirecting your gently used water to nourish your garden, you’re making a powerful choice for conservation, resilience, and self-sufficiency.</p>
     `,
   },
   {
@@ -153,7 +183,7 @@ const posts = [
       <p>Tucson's comprehensive approach combines rebates, education, and rainwater harvesting incentives. Since implementing these policies, the city has seen a 30% reduction in per capita water use despite population growth.</p>
     `,
   },
-  
+
 ];
 
 function HeaderComponent() {
